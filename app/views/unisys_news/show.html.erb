@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @unisys_news.title %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @unisys_news.link %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= image_tag @unisys_news.image_url.to_s %>
+</p>
+
+<%= link_to 'Edit', edit_unisys_news_path(@unisys_news) %> |
+<%= link_to 'Back', unisys_news_index_path %>

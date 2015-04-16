@@ -1,0 +1,27 @@
+<h1>Listing get_started_pdfs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @get_started_pdfs.each do |get_started_pdf| %>
+      <tr>
+        <td><%= get_started_pdf.title %></td>
+        <td><%= get_started_pdf.content %></td>
+        <td><%= link_to 'Show', get_started_pdf %></td>
+        <td><%= link_to 'Edit', edit_get_started_pdf_path(get_started_pdf) %></td>
+        <td><%= link_to 'Destroy', get_started_pdf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Get started pdf', new_get_started_pdf_path %>

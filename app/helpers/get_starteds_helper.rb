@@ -1,0 +1,2 @@
+module GetStartedsHelper
+end

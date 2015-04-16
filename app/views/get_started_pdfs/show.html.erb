@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @get_started_pdf.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @get_started_pdf.content %>
+</p>
+
+<%= link_to 'Edit', edit_get_started_pdf_path(@get_started_pdf) %> |
+<%= link_to 'Back', get_started_pdfs_path %>

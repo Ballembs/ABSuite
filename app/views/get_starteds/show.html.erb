@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @get_started.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @get_started.content %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @get_started.link %>
+</p>
+
+<%= link_to 'Edit', edit_get_started_path(@get_started) %> |
+<%= link_to 'Back', get_starteds_path %>

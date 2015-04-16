@@ -1,0 +1,33 @@
+<%= form_for(@get_started) do |f| %>
+  <% if @get_started.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@get_started.errors.count, "error") %> prohibited this get_started from being saved:</h2>
+
+      <ul>
+      <% @get_started.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div  class="field">
+    <%= f.label :image %><br>
+     <%= f.text_field :image %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

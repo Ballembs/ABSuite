@@ -1,0 +1,27 @@
+<h1>Listing unisys_news</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Link</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @unisys_news.each do |unisys_news| %>
+      <tr>
+        <td><%= unisys_news.title %></td>
+        <td><%= unisys_news.link %></td>
+        <td><%= link_to 'Show', unisys_news %></td>
+        <td><%= link_to 'Edit', edit_unisys_news_path(unisys_news) %></td>
+        <td><%= link_to 'Destroy', unisys_news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unisys news', new_unisys_news_path %>
